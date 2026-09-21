@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let audioFadeFrame;
     let userPausedAudio = false;
 
+    /* Safari pada iPadOS boleh melaporkan dirinya seperti komputer Mac. */
+    const isAppleTouchDevice = /iPhone|iPad|iPod/i.test(navigator.userAgent)
+        || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
     /* ======================================================
        2. SKRIN PEMBUKAAN DAN NAVIGASI
        ====================================================== */
@@ -84,9 +88,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            backgroundMusic.volume = 0;
+            /*
+             * iPadOS tidak menyokong kawalan volum JavaScript dengan konsisten.
+             * Untuk peranti Apple bersentuh, audio dimainkan terus tanpa fade.
+             */
+            if (!isAppleTouchDevice) {
+                backgroundMusic.volume = 0;
+            }
+
             await backgroundMusic.play();
-            fadeMusicTo(0.14);
+
+            if (!isAppleTouchDevice) {
+                fadeMusicTo(0.14);
+            }
+
             updateMusicButton(true);
             removeFirstInteractionListeners();
         } catch (error) {
@@ -101,10 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const removeFirstInteractionListeners = () => {
         document.removeEventListener("pointerdown", startMusicOnFirstInteraction);
+        document.removeEventListener("touchstart", startMusicOnFirstInteraction);
+        document.removeEventListener("touchend", startMusicOnFirstInteraction);
+        document.removeEventListener("click", startMusicOnFirstInteraction);
         document.removeEventListener("keydown", startMusicOnFirstInteraction);
     };
 
     document.addEventListener("pointerdown", startMusicOnFirstInteraction);
+    document.addEventListener("touchstart", startMusicOnFirstInteraction, { passive: true });
+    document.addEventListener("touchend", startMusicOnFirstInteraction, { passive: true });
+    document.addEventListener("click", startMusicOnFirstInteraction);
     document.addEventListener("keydown", startMusicOnFirstInteraction);
 
     /* Cubaan pertama dibuat terus selepas struktur halaman tersedia. */
