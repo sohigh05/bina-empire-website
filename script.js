@@ -406,28 +406,28 @@ document.addEventListener("DOMContentLoaded", () => {
             note: "Pelatih Industri: Nik Muhammad Suhail Bin Nik Othman; Firdaus Sim Chong Fei."
         },
         kantin: {
-            number: "02", symbol: "◫", category: "Operasi Institusi", title: "Bina Empire Kantin SMK Jati",
+            number: "02", symbol: "◫", category: "Operasi Kafeteria", title: "Operasi Kafeteria",
             intro: "", status: "", location: "", phase: "", overview: "", scope: [], value: "", note: ""
         },
         construction: {
             number: "03", symbol: "△", category: "Pembinaan", title: "Construction", intro: "",
             status: "Pembinaan", location: "Muhammad Aqil Zarif Bin Zainal Abidin", phase: "Penyelia",
-            overview: "Menurap Semula Jalan di Jalan Pinggiran Perpaduan 2, Taman U.K Raya, Majlis Bandaraya Ipoh. Penyelenggaraan Jalan di Jalan Regat Kangsar 3, Jalan Pari Baru 1 dan Sekitar, Ipoh, Majlis Bandaraya Ipoh.",
-            scope: ["Kerja menurap semula jalan serta kerja-kerja berkaitan.", "Kerja penyelenggaraan jalan serta kerja-kerja berkaitan."],
-            value: "6 Julai - 4 Ogos 2026 (4 minggu); 6 Julai - 3 Ogos 2026 (4 minggu).", note: ""
+            overview: "Perkhidmatan pembinaan, penyelenggaraan dan penambahbaikan infrastruktur.",
+            scope: ["Kerja pembinaan dan penyelenggaraan.", "Kerja penambahbaikan infrastruktur."],
+            value: "", note: ""
         },
         agro: {
             number: "04", symbol: "♧", category: "Agro & Farm", title: "Agro & Farm", intro: "",
             status: "Agro & Farm", location: "Muhamad Afendi Bin Ahmad", phase: "Penyelia",
-            overview: "Pelantikan sebagai Pembekal Lembu Korban bagi Program Ibadah Korban Sumbangan Kerajaan Negeri Perak Tahun 2025 dan Tahun 2026 - Kerajaan Negeri Perak / Pejabat Menteri Besar Perak.",
-            scope: ["Pembekalan lembu korban."], value: "2025; 2026", note: ""
+            overview: "Pembekalan ternakan mengikut keperluan pelanggan dan program.",
+            scope: ["Pembekalan dan pengurusan ternakan."], value: "", note: ""
         },
         fnb: {
             number: "05", symbol: "◇", category: "Makanan & Minuman", title: "F&B", intro: "",
             status: "Makanan & Minuman", location: "Farhanah Binti Firdaus Francis", phase: "Eksekutif Projek",
-            overview: "Kafeteria Kelab Golf Kinta; Beribu Bintang Cafe; Perkhidmatan Katering.",
+            overview: "Perkhidmatan kafeteria, kafe dan katering.",
             scope: ["Pengurusan dan operasi kafeteria.", "Operasi kafe dan penyediaan makanan serta minuman.", "Penyediaan makanan untuk majlis dan acara."],
-            value: "2022 - 2025; 2024 - Kini; 2026 - Kini", note: ""
+            value: "", note: ""
         },
         "secret-pastry": {
             number: "06", symbol: "✦", category: "Secret Pastry & Coffee", title: "Secret Pastry & Coffee",
@@ -449,7 +449,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Firdaus Sim Chong Fei": "assets/images/firdaus-sim-chong-fei.jpg",
         "Nur Maisarah Binti Rosidi": "assets/images/nur-maisarah-binti-rosidi.jpg",
         "Muhammad Hanif Bin Zamail": "assets/images/muhammad-hanif-bin-zamail.png",
-        "Nuur Lisa Izzati Binti Ahmad": "assets/images/nuur-lisa-izzati-binti-ahmad.png"
+        "Nuur Lisa Izzati Binti Ahmad": "assets/images/nuur-lisa-izzati-binti-ahmad.png",
+        "NorShahirah Binti Muhaiyidin": "assets/images/nor-shahirah-binti-muhaiyidin.jpg",
+        "Muhamad Afendi Bin Ahmad": "assets/images/muhamad-afendi-bin-ahmad-upscaled.png"
     };
     const placeholderPortrait = "assets/images/portrait-placeholder.svg";
 
