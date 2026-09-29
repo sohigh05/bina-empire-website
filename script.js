@@ -401,10 +401,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectData = {
         it: {
             number: "01", symbol: "⌘", category: "Teknologi Maklumat", title: "IT",
-            intro: "Penyelesaian teknologi yang menyokong operasi syarikat secara lebih cekap dan teratur.",
+            intro: "Buat masa kini, bidang IT memberi tumpuan kepada pembangunan website, sistem berasaskan web dan web tempahan.",
             status: "Teknologi Maklumat", location: "Nor Azila Binti Aznam", phase: "Eksekutif Projek",
-            overview: "Memberikan sokongan teknologi serta mengurus keperluan sistem dan penyelesaian digital.",
-            scope: ["Sokongan teknologi dan sistem.", "Pengurusan penyelesaian digital."], value: "",
+            overview: "Membangunkan penyelesaian web yang disesuaikan mengikut keperluan operasi dan pengalaman pengguna.",
+            scope: ["Pembangunan website.", "Pembangunan sistem berasaskan web.", "Pembangunan web tempahan."], value: "",
             note: "Pelatih Industri: Nik Muhammad Suhail Bin Nik Othman; Firdaus Sim Chong Fei."
         },
         construction: {
