@@ -400,39 +400,43 @@ document.addEventListener("DOMContentLoaded", () => {
        ====================================================== */
     const projectData = {
         it: {
-            number: "01", symbol: "⌘", category: "Teknologi Maklumat", title: "IT", intro: "",
+            number: "01", symbol: "⌘", category: "Teknologi Maklumat", title: "IT",
+            intro: "Penyelesaian teknologi yang menyokong operasi syarikat secara lebih cekap dan teratur.",
             status: "Teknologi Maklumat", location: "Nor Azila Binti Aznam", phase: "Eksekutif Projek",
-            overview: "", scope: [], value: "",
+            overview: "Memberikan sokongan teknologi serta mengurus keperluan sistem dan penyelesaian digital.",
+            scope: ["Sokongan teknologi dan sistem.", "Pengurusan penyelesaian digital."], value: "",
             note: "Pelatih Industri: Nik Muhammad Suhail Bin Nik Othman; Firdaus Sim Chong Fei."
         },
-        kantin: {
-            number: "02", symbol: "◫", category: "Operasi Kafeteria", title: "Operasi Kafeteria",
-            intro: "", status: "", location: "", phase: "", overview: "", scope: [], value: "", note: ""
-        },
         construction: {
-            number: "03", symbol: "△", category: "Pembinaan", title: "Construction", intro: "",
+            number: "02", symbol: "△", category: "Pembinaan", title: "Construction",
+            intro: "Perkhidmatan pembinaan dan penyelenggaraan yang dilaksanakan secara tersusun dan profesional.",
             status: "Pembinaan", location: "Muhammad Aqil Zarif Bin Zainal Abidin", phase: "Penyelia",
             overview: "Perkhidmatan pembinaan, penyelenggaraan dan penambahbaikan infrastruktur.",
             scope: ["Kerja pembinaan dan penyelenggaraan.", "Kerja penambahbaikan infrastruktur."],
             value: "", note: ""
         },
         agro: {
-            number: "04", symbol: "♧", category: "Agro & Farm", title: "Agro & Farm", intro: "",
+            number: "03", symbol: "♧", category: "Agro & Farm", title: "Agro & Farm",
+            intro: "Pengurusan dan pembekalan ternakan yang menitikberatkan kualiti serta kebajikan.",
             status: "Agro & Farm", location: "Muhamad Afendi Bin Ahmad", phase: "Penyelia",
             overview: "Pembekalan ternakan mengikut keperluan pelanggan dan program.",
             scope: ["Pembekalan dan pengurusan ternakan."], value: "", note: ""
         },
         fnb: {
-            number: "05", symbol: "◇", category: "Makanan & Minuman", title: "F&B", intro: "",
+            number: "04", symbol: "◇", category: "Makanan & Minuman", title: "F&B",
+            intro: "Perkhidmatan makanan dan minuman untuk operasi harian, majlis serta acara.",
             status: "Makanan & Minuman", location: "Farhanah Binti Firdaus Francis", phase: "Eksekutif Projek",
             overview: "Perkhidmatan kafeteria, kafe dan katering.",
             scope: ["Pengurusan dan operasi kafeteria.", "Operasi kafe dan penyediaan makanan serta minuman.", "Penyediaan makanan untuk majlis dan acara."],
             value: "", note: ""
         },
         "secret-pastry": {
-            number: "06", symbol: "✦", category: "Secret Pastry & Coffee", title: "Secret Pastry & Coffee",
-            intro: "", status: "Secret Pastry & Coffee", location: "Muhammad Hanif Bin Zamail",
-            phase: "Pengurus", overview: "", scope: [], value: "", note: "Penyelia: Nur Maisarah Binti Rosidi."
+            number: "05", symbol: "✦", category: "Secret Pastry & Coffee", title: "Secret Pastry & Coffee",
+            intro: "Pilihan pastri dan kopi yang disediakan dalam pengalaman sajian yang kemas dan mesra.",
+            status: "Secret Pastry & Coffee", location: "Muhammad Hanif Bin Zamail",
+            phase: "Pengurus", overview: "Pengurusan sajian pastri, kopi dan pengalaman pelanggan.",
+            scope: ["Penyediaan pastri dan minuman.", "Pengurusan operasi serta pengalaman pelanggan."],
+            value: "", note: "Penyelia: Nur Maisarah Binti Rosidi."
         }
     };
 
@@ -451,7 +455,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Muhammad Hanif Bin Zamail": "assets/images/muhammad-hanif-bin-zamail.png",
         "Nuur Lisa Izzati Binti Ahmad": "assets/images/nuur-lisa-izzati-binti-ahmad.png",
         "NorShahirah Binti Muhaiyidin": "assets/images/nor-shahirah-binti-muhaiyidin.jpg",
-        "Muhamad Afendi Bin Ahmad": "assets/images/muhamad-afendi-bin-ahmad-upscaled.png"
+        "Muhamad Afendi Bin Ahmad": "assets/images/muhamad-afendi-bin-ahmad-upscaled.png",
+        "Farhanah Binti Firdaus Francis": "assets/images/farhanah-binti-firdaus-francis.jpg",
+        "Nor Azila Binti Aznam": "assets/images/nor-azila-binti-aznam.jpg"
     };
     const placeholderPortrait = "assets/images/portrait-placeholder.svg";
 

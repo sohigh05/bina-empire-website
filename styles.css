@@ -1221,7 +1221,7 @@ button {
 .project-metrics small { display: block; color: #666; font-size: 9px; text-transform: uppercase; }
 .project-metrics strong { display: block; margin-top: 8px; font: 500 26px var(--font-tajuk); }
 
-/* Direktori enam cabang perniagaan */
+/* Direktori lima cabang perniagaan */
 .project-directory {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
