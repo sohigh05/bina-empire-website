@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sohigh05.github.io/bina-empire-website/sitemap.xml
