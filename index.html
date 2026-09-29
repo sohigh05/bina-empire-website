@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<!--
+    ==========================================================
+    PROJEK LAMAN KORPORAT BINA EMPIRE ENTERPRISE
+    Teknologi: HTML5, CSS3 dan JavaScript
+    Bahasa kandungan: Bahasa Melayu
+    ==========================================================
+-->
+<html lang="ms">
+
+<head>
+    <!-- Tetapan asas laman web -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Laman korporat rasmi Bina Empire Enterprise - kontraktor binaan, pembekalan, pembersihan dan penternakan di Ipoh, Perak.">
+    <meta name="theme-color" content="#070707">
+
+    <title>Bina Empire Enterprise | Membina Kepercayaan, Mengukuhkan Masa Hadapan</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-bina-empire.png">
+
+    <!-- Fon moden daripada Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Fail gaya utama -->
+    <link rel="stylesheet" href="styles.css?v=20260929-21">
+</head>
+
+<body>
+    <!-- Skrin pembukaan ringkas -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-logo">
+            <img src="assets/images/logo-bina-empire.png" alt="">
+        </div>
+        <div class="loader-line"><span></span></div>
+        <p>Membina masa hadapan</p>
+    </div>
+
+    <!-- Transisi elegan apabila berpindah antara bahagian laman -->
+    <div class="page-transition" id="pageTransition" aria-hidden="true">
+        <div class="transition-panel panel-left"></div>
+        <div class="transition-panel panel-right"></div>
+        <div class="transition-brand">
+            <div class="transition-logo-wrap">
+                <span class="transition-orbit"></span>
+                <img src="assets/images/logo-bina-empire.png" alt="">
+            </div>
+            <div class="transition-line"><span></span></div>
+            <p id="transitionLabel">Bina Empire Enterprise</p>
+        </div>
+    </div>
+
+    <!-- Elemen hiasan latar belakang -->
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Muzik latar korporat dengan kawalan pengguna -->
+    <audio id="backgroundMusic" autoplay loop preload="auto" playsinline webkit-playsinline>
+        <source src="assets/audio/rentak-pendekar.mp3" type="audio/mpeg">
+        Pelayar anda tidak menyokong audio HTML5.
+    </audio>
+
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Hentikan muzik latar"
+        aria-pressed="false">
+        <span class="music-bars" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+        </span>
+        <span class="music-copy">
+            <small>Audio latar</small>
+            <strong id="musicStatus">Rentak Pendekar</strong>
+        </span>
+    </button>
+
+    <!-- Navigasi utama -->
+    <header class="site-header" id="siteHeader">
+        <a href="#utama" class="brand" aria-label="Bina Empire Enterprise - ke halaman utama">
+            <img src="assets/images/logo-bina-empire.png" alt="Logo Bina Empire Enterprise">
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navigasi utama">
+            <a href="#tentang">Tentang</a>
+            <a href="#kepakaran">Kepakaran</a>
+            <a href="#nilai">Nilai</a>
+            <a href="#projek">Projek</a>
+            <a href="#dokumen">Dokumen</a>
+        </nav>
+
+        <a class="header-contact" href="#hubungi">Hubungi Kami <span aria-hidden="true">↗</span></a>
+
+        <button class="menu-button" id="menuButton" type="button" aria-label="Buka menu" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Menu telefon bimbit -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#tentang">Tentang</a>
+        <a href="#kepakaran">Kepakaran</a>
+        <a href="#nilai">Nilai</a>
+        <a href="#projek">Projek</a>
+        <a href="#dokumen">Dokumen</a>
+        <a href="#hubungi">Hubungi Kami</a>
+    </div>
+
+    <main>
+        <!-- Bahagian hero -->
+        <section class="hero" id="utama">
+            <div class="hero-grid" aria-hidden="true"></div>
+            <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+            <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+
+            <!-- Objek 3D terapung untuk memberi kedalaman pada ruang hero -->
+            <div class="motion-scene" id="motionScene" aria-hidden="true">
+                <span class="motion-cube cube-one" data-depth="18"><i></i></span>
+                <span class="motion-cube cube-two" data-depth="30"><i></i></span>
+                <span class="motion-ring ring-one" data-depth="12"></span>
+                <span class="motion-beam beam-one" data-depth="22"></span>
+                <span class="motion-beam beam-two" data-depth="35"></span>
+            </div>
+
+            <div class="hero-copy reveal">
+                <div class="eyebrow"><span></span> Syarikat Milikan Tunggal · Sejak 2022</div>
+                <h1>Membina <em>kepercayaan.</em><br>Mengukuhkan masa hadapan.</h1>
+                <p class="hero-intro">
+                    Syarikat terlibat dalam sektor pembinaan, kejuruteraan awam, pembekalan, pembersihan,
+                    penternakan serta makanan dan minuman.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary magnetic" href="#kepakaran">Terokai Kepakaran <span>↘</span></a>
+                    <a class="text-link" href="#tentang">Kenali Bina Empire <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Kad 3D utama -->
+            <div class="hero-visual reveal" data-delay="200">
+                <div class="hero-card tilt-card" id="heroCard">
+                    <img src="assets/images/bangunan-korporat.jpg"
+                        alt="Bangunan moden mewakili perkhidmatan korporat Bina Empire">
+                    <div class="hero-card-shade"></div>
+                    <div class="hero-card-label">
+                        <small>BINA EMPIRE</small>
+                        <strong>ENTERPRISE</strong>
+                    </div>
+                    <div class="year-stamp"><span>EST.</span> 2022</div>
+                </div>
+                <div class="card-shadow-3d" aria-hidden="true"></div>
+                <div class="floating-badge badge-one"><b>2022</b><span>Tahun<br>Ditubuhkan</span></div>
+                <div class="floating-badge badge-two"><b>06</b><span>Sektor<br>Utama</span></div>
+            </div>
+
+            <a class="scroll-cue" href="#tentang">
+                <span>Skrol untuk meneroka</span>
+                <i aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <!-- Jalur maklumat bergerak -->
+        <div class="ticker" aria-label="Bidang perkhidmatan Bina Empire">
+            <div class="ticker-track">
+                <span>Kontraktor Binaan <b>✦</b></span>
+                <span>Kejuruteraan Awam <b>✦</b></span>
+                <span>Pembekalan <b>✦</b></span>
+                <span>Pembersihan <b>✦</b></span>
+                <span>Penternakan <b>✦</b></span>
+                <span>Makanan &amp; Minuman <b>✦</b></span>
+                <span>Kontraktor Binaan <b>✦</b></span>
+                <span>Kejuruteraan Awam <b>✦</b></span>
+                <span>Pembekalan <b>✦</b></span>
+                <span>Pembersihan <b>✦</b></span>
+                <span>Penternakan <b>✦</b></span>
+                <span>Makanan &amp; Minuman <b>✦</b></span>
+            </div>
+        </div>
+
+        <!-- Pengenalan syarikat -->
+        <section class="section about" id="tentang">
+            <div class="section-number reveal">01 / Tentang Kami</div>
+
+            <div class="about-layout">
+                <div class="about-heading reveal">
+                    <p class="kicker">Profil korporat</p>
+                    <h2>Keupayaan pelbagai.<br><span>Satu komitmen.</span></h2>
+                </div>
+
+                <div class="about-copy reveal" data-delay="120">
+                    <p class="lead">
+                        Bina Empire Enterprise merupakan syarikat milikan tunggal yang didaftarkan pada
+                        <strong>4 Ogos 2022</strong> dan beroperasi di Ipoh, Perak.
+                    </p>
+                    <p>
+                        Syarikat terlibat dalam sektor pembinaan, kejuruteraan awam, pembekalan, pembersihan,
+                        penternakan serta makanan dan minuman. Perkhidmatan yang ditawarkan merangkumi pembinaan
+                        dan penyelenggaraan, pembekalan bahan serta peralatan, pembersihan dan pengurusan sisa,
+                        jual beli ternakan serta pengurusan kafeteria, kafe dan katering.
+                    </p>
+                    <p>
+                        Disokong oleh tenaga kerja berpengalaman dan peralatan bersesuaian, syarikat komited
+                        menyediakan perkhidmatan berkualiti, cekap dan menepati masa bagi memenuhi keperluan
+                        pelanggan sektor awam serta swasta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Profil pemilik dengan ruang khas untuk gambar rasmi -->
+            <div class="owner-profile reveal">
+                <div class="owner-portrait">
+                    <div class="owner-portrait-frame">
+                        <img class="owner-photo" src="assets/images/saiful-azzuan-bin-aznam.jpg"
+                            alt="Potret Ir. Ts. Saiful Azzuan Bin Aznam">
+                        <div class="owner-photo-label"><small>Pemilik &amp; Ketua Pegawai Eksekutif</small><strong>Ir. Ts. Saiful Azzuan</strong></div>
+                    </div>
+                    <span class="owner-orbit" aria-hidden="true"></span>
+                </div>
+
+                <div class="owner-information">
+                    <p class="kicker">Maklumat Pemilik</p>
+                    <h2>Ir. Ts. Saiful Azzuan<br><span>Bin Aznam</span></h2>
+                    <p class="owner-position">Ketua Pegawai Eksekutif</p>
+
+                    <div class="owner-facts">
+                        <div><small>Tempat Lahir</small><strong>Ipoh, Perak</strong></div>
+                        <div><small>Kewarganegaraan</small><strong>Warganegara Malaysia</strong></div>
+                        <div><small>Tarikh Mula</small><strong>4 Ogos 2022</strong></div>
+                        <div><small>E-mel</small><a href="mailto:binaempire@outlook.com">binaempire@outlook.com</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="management-block reveal">
+                <div class="org-title">
+                    <p class="kicker">Carta Organisasi</p>
+                    <span>Struktur Pengurusan &amp; Operasi</span>
+                </div>
+
+                <div class="organization-chart">
+                    <div class="org-level org-level-director">
+                        <article class="org-card org-card-primary">
+                            <small>Pengarah Syarikat</small>
+                            <h3>Ir. Ts. Saiful Azzuan Bin Aznam</h3>
+                        </article>
+                    </div>
+
+                    <div class="org-level org-level-manager">
+                        <article class="org-card org-card-secondary">
+                            <small>Pengurus Syarikat</small>
+                            <h3>Muhamad Saiful Ilman Bin Aznam</h3>
+                        </article>
+                    </div>
+
+                    <div class="org-level org-level-administration">
+                        <article class="org-card">
+                            <small>Akauntan</small>
+                            <h3>NorShahirah Binti Muhaiyidin</h3>
+                        </article>
+                        <article class="org-card">
+                            <small>Sumber Manusia &amp; Pentadbiran</small>
+                            <h3>Nuur Lisa Izzati Binti Ahmad</h3>
+                        </article>
+                    </div>
+
+                    <div class="org-division-label"><span>Bahagian Operasi</span></div>
+
+                    <div class="org-level org-level-divisions">
+                        <article class="org-card org-division-card">
+                            <small>Pembinaan</small><span>Penyelia</span>
+                            <h3>Muhammad Aqil Zarif Bin Zainal Abidin</h3>
+                        </article>
+                        <article class="org-card org-division-card">
+                            <small>Secret Pastry &amp; Coffee</small><span>Pengurus</span>
+                            <h3>Muhammad Hanif Bin Zamail</h3>
+                            <div class="org-subordinate"><b>Penyelia</b><p>Nur Maisarah Binti Rosidi</p></div>
+                        </article>
+                        <article class="org-card org-division-card">
+                            <small>Agro &amp; Farm</small><span>Penyelia</span>
+                            <h3>Muhamad Afendi Bin Ahmad</h3>
+                        </article>
+                        <article class="org-card org-division-card">
+                            <small>Teknologi Maklumat</small><span>Eksekutif Projek</span>
+                            <h3>Nor Azila Binti Aznam</h3>
+                            <div class="org-subordinate"><b>Pelatih Industri</b><p>Nik Muhammad Suhail Bin Nik Othman</p></div>
+                            <div class="org-subordinate"><b>Pelatih Industri</b><p>Firdaus Sim Chong Fei</p></div>
+                        </article>
+                        <article class="org-card org-division-card">
+                            <small>Makanan &amp; Minuman</small><span>Eksekutif Projek</span>
+                            <h3>Farhanah Binti Firdaus Francis</h3>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bidang perkhidmatan -->
+        <section class="section services" id="kepakaran">
+            <div class="section-top reveal">
+                <div>
+                    <div class="section-number">02 / Kepakaran</div>
+                    <h2>Penyelesaian dari asas<br>hingga <span>hasil akhir.</span></h2>
+                </div>
+                <p>Sektor pembinaan, kejuruteraan awam, pembekalan, pembersihan, penternakan serta makanan dan minuman.</p>
+            </div>
+
+            <div class="service-list">
+                <article class="service-card reveal tilt-card">
+                    <span class="service-index">01</span>
+                    <div class="service-icon">⌂</div>
+                    <h3>Kontraktor Binaan</h3>
+                    <p>Pembinaan dan penyelenggaraan.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+
+                <article class="service-card reveal tilt-card" data-delay="80">
+                    <span class="service-index">02</span>
+                    <div class="service-icon">⌁</div>
+                    <h3>Kejuruteraan Awam</h3>
+                    <p>Kejuruteraan awam.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+
+                <article class="service-card reveal tilt-card" data-delay="160">
+                    <span class="service-index">03</span>
+                    <div class="service-icon">◇</div>
+                    <h3>Pembekalan</h3>
+                    <p>Pembekalan bahan serta peralatan.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+
+                <article class="service-card reveal tilt-card">
+                    <span class="service-index">04</span>
+                    <div class="service-icon">✦</div>
+                    <h3>Pembersihan</h3>
+                    <p>Pembersihan dan pengurusan sisa.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+
+                <article class="service-card reveal tilt-card" data-delay="80">
+                    <span class="service-index">05</span>
+                    <div class="service-icon">♧</div>
+                    <h3>Penternakan</h3>
+                    <p>Jual beli ternakan.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+
+                <article class="service-card reveal tilt-card" data-delay="160">
+                    <span class="service-index">06</span>
+                    <div class="service-icon">◫</div>
+                    <h3>Makanan &amp; Minuman</h3>
+                    <p>Pengurusan kafeteria, kafe dan katering.</p>
+                    <i aria-hidden="true">↗</i>
+                </article>
+            </div>
+        </section>
+
+        <!-- Visi, misi dan nilai teras -->
+        <section class="section values" id="nilai">
+            <div class="values-glow" aria-hidden="true"></div>
+
+            <div class="values-intro reveal">
+                <div class="section-number">03 / Hala Tuju</div>
+                <p class="kicker">Visi kami</p>
+                <h2>Menjadi sebuah syarikat milikan tunggal yang unggul, berdaya saing dan <span>dipercayai.</span></h2>
+                <p>
+                    Menjadi sebuah syarikat milikan tunggal yang unggul, berdaya saing dan dipercayai dalam
+                    menyediakan perkhidmatan kontraktor binaan, kejuruteraan awam, pembekalan, pembersihan serta
+                    penternakan di peringkat tempatan dan nasional. Berteraskan integriti, kualiti, keselamatan dan
+                    kemampanan, syarikat komited untuk menyokong pembangunan infrastruktur serta meningkatkan
+                    kesejahteraan masyarakat secara menyeluruh.
+                </p>
+            </div>
+
+            <div class="mission-block reveal">
+                <p class="kicker">Misi kami</p>
+                <div class="mission-grid">
+                    <article><b>01</b><h3>Menyampaikan Perkhidmatan Berkualiti</h3><p>Menyediakan perkhidmatan pembinaan, kejuruteraan awam dan pembekalan yang berkualiti tinggi serta memenuhi keperluan dan jangkaan pelanggan.</p></article>
+                    <article><b>02</b><h3>Menawarkan Penyelesaian Menyeluruh</h3><p>Menyediakan penyelesaian yang cekap, selamat dan berkesan bagi kerja-kerja pembersihan serta pengurusan sisa.</p></article>
+                    <article><b>03</b><h3>Menyokong Sektor Penternakan</h3><p>Menyumbang kepada pembangunan sektor pertanian dan penternakan melalui aktiviti jual beli ternakan serta produk berkaitan.</p></article>
+                    <article><b>04</b><h3>Membina Hubungan Strategik</h3><p>Mewujudkan hubungan perniagaan yang kukuh dan berkekalan berasaskan kepercayaan, integriti serta kepuasan pelanggan.</p></article>
+                    <article><b>05</b><h3>Memastikan Pematuhan Operasi</h3><p>Mengutamakan pematuhan terhadap semua peraturan keselamatan, piawaian industri dan keperluan perundangan dalam setiap aspek operasi syarikat.</p></article>
+                </div>
+            </div>
+
+            <div class="value-cards">
+                <article class="value-card reveal">
+                    <b>01</b>
+                    <h3>Integriti</h3>
+                    <p>Mengamalkan kejujuran, amanah dan ketelusan dalam setiap urusan bagi membina kepercayaan serta hubungan profesional yang berkekalan dengan pelanggan, rakan perniagaan dan pihak berkepentingan.</p>
+                </article>
+                <article class="value-card reveal" data-delay="60">
+                    <b>02</b>
+                    <h3>Profesionalisme</h3>
+                    <p>Melaksanakan setiap tugasan dengan penuh tanggungjawab, disiplin dan kompetensi, berpandukan etika kerja yang tinggi serta komitmen terhadap kecemerlangan perkhidmatan.</p>
+                </article>
+                <article class="value-card reveal" data-delay="120">
+                    <b>03</b>
+                    <h3>Kualiti</h3>
+                    <p>Mengutamakan standard kerja yang berkualiti melalui penyampaian perkhidmatan yang cekap, kemas dan memenuhi keperluan serta kepuasan pelanggan.</p>
+                </article>
+                <article class="value-card reveal">
+                    <b>04</b>
+                    <h3>Keselamatan</h3>
+                    <p>Menjadikan aspek keselamatan sebagai keutamaan dalam setiap operasi dengan memastikan kebajikan pekerja, pelanggan dan orang awam sentiasa terpelihara mengikut amalan serta prosedur yang ditetapkan.</p>
+                </article>
+                <article class="value-card reveal" data-delay="60">
+                    <b>05</b>
+                    <h3>Fleksibiliti</h3>
+                    <p>Menawarkan penyelesaian yang fleksibel dan mampu disesuaikan mengikut keperluan setiap projek bagi memastikan perkhidmatan yang diberikan sentiasa relevan dan berkesan.</p>
+                </article>
+                <article class="value-card reveal" data-delay="120">
+                    <b>06</b>
+                    <h3>Kemampanan</h3>
+                    <p>Menyokong amalan kerja yang mampan melalui penggunaan sumber secara bertanggungjawab serta menggalakkan pendekatan yang mesra alam dalam operasi harian syarikat.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projek dan pengalaman -->
+        <section class="section projects" id="projek">
+            <div class="section-top reveal">
+                <div>
+                    <div class="section-number">04 / Portfolio Kumpulan</div>
+                    <h2>Satu empayar.<br><span>Pelbagai cabang.</span></h2>
+                </div>
+                <p>Senarai projek dan pengalaman lepas Bina Empire Enterprise.</p>
+            </div>
+
+            <!-- Direktori subprojek yang boleh diteroka oleh pengguna -->
+            <div class="project-directory">
+                <button class="subproject-card reveal tilt-card" type="button" data-project="it">
+                    <span class="subproject-index">01</span><span class="subproject-icon">⌘</span>
+                    <div class="subproject-main"><small>Teknologi Maklumat</small><h3>IT</h3><p>Eksekutif Projek: Nor Azila Binti Aznam.</p></div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+                <button class="subproject-card reveal tilt-card" type="button" data-project="kantin" data-delay="60">
+                    <span class="subproject-index">02</span><span class="subproject-icon">◫</span>
+                    <div class="subproject-main"><small>Operasi Institusi</small><h3>Bina Empire<br>Kantin SMK Jati</h3><p></p></div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+                <button class="subproject-card reveal tilt-card" type="button" data-project="construction" data-delay="120">
+                    <span class="subproject-index">03</span><span class="subproject-icon">△</span>
+                    <div class="subproject-main"><small>Pembinaan</small><h3>Construction</h3><p>Penyelia: Muhammad Aqil Zarif Bin Zainal Abidin.</p></div>
+                    <div class="subproject-projects">
+                        <span><b>2026</b>Menurap Semula Jalan di Jalan Pinggiran Perpaduan 2, Taman U.K Raya.</span>
+                        <span><b>2026</b>Penyelenggaraan Jalan di Jalan Regat Kangsar 3, Jalan Pari Baru 1 dan Sekitar, Ipoh.</span>
+                    </div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+                <button class="subproject-card reveal tilt-card" type="button" data-project="agro" data-delay="40">
+                    <span class="subproject-index">04</span><span class="subproject-icon">♧</span>
+                    <div class="subproject-main"><small>Agro &amp; Farm</small><h3>Agro &amp; Farm</h3><p>Penyelia: Muhamad Afendi Bin Ahmad.</p></div>
+                    <div class="subproject-gallery" aria-label="Gambar pembekalan lembu korban">
+                        <img src="assets/images/projek-01.jpg" alt="Pembekalan lembu korban">
+                        <img src="assets/images/projek-03.jpg" alt="Lembu korban semasa penghantaran">
+                        <img src="assets/images/projek-06.jpg" alt="Pemantauan lembu korban">
+                    </div>
+                    <div class="subproject-projects">
+                        <span><b>2025</b>Program Ibadah Korban Sumbangan Kerajaan Negeri Perak.</span>
+                        <span><b>2026</b>Program Ibadah Korban Sumbangan Kerajaan Negeri Perak.</span>
+                    </div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+                <button class="subproject-card reveal tilt-card" type="button" data-project="fnb" data-delay="100">
+                    <span class="subproject-index">05</span><span class="subproject-icon">◇</span>
+                    <div class="subproject-main"><small>Makanan &amp; Minuman</small><h3>F&amp;B</h3><p>Eksekutif Projek: Farhanah Binti Firdaus Francis.</p></div>
+                    <div class="subproject-projects">
+                        <span><b>2022 - 2025</b>Kafeteria Kelab Golf Kinta.</span>
+                        <span><b>2024 - Kini</b>Beribu Bintang Cafe.</span>
+                        <span><b>2026 - Kini</b>Perkhidmatan Katering.</span>
+                    </div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+                <button class="subproject-card subproject-card-featured reveal tilt-card" type="button"
+                    data-project="secret-pastry" data-delay="160">
+                    <span class="subproject-index">06</span><span class="subproject-icon">✦</span>
+                    <div class="subproject-main"><small>Secret Pastry &amp; Coffee</small><h3>Secret Pastry<br>&amp; Coffee</h3><p>Pengurus: Muhammad Hanif Bin Zamail.</p></div>
+                    <span class="subproject-open">Terokai <i>↗</i></span>
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Dokumen rasmi -->
+        <section class="section documents" id="dokumen">
+            <div class="documents-heading reveal">
+                <div>
+                    <div class="section-number">05 / Dokumen Rasmi</div>
+                    <h2>Pendaftaran &amp;<br><span>pensijilan.</span></h2>
+                </div>
+                <div class="security-note">
+                    <span>▣</span>
+                    <p>Dokumen dilindungi. Paparan skrin penuh sahaja dan tidak disediakan untuk muat turun.</p>
+                </div>
+            </div>
+
+            <div class="document-grid">
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/ssm-sijil-pendaftaran.png" data-title="Sijil Pendaftaran SSM">
+                    <span class="doc-code">SSM / 01</span><div class="doc-mark">SSM</div>
+                    <div><small>Pendaftaran Perniagaan</small><h3>Sijil Pendaftaran SSM</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/ssm-maklumat-perniagaan.png" data-title="Maklumat Perniagaan SSM">
+                    <span class="doc-code">SSM / 02</span><div class="doc-mark">SSM</div>
+                    <div><small>Maklumat Perniagaan</small><h3>Maklumat Korporat SSM</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/mof-akuan-pendaftaran.png" data-title="Akuan Pendaftaran MOF">
+                    <span class="doc-code">MOF / 01</span><div class="doc-mark">MOF</div>
+                    <div><small>Kementerian Kewangan</small><h3>Akuan Pendaftaran MOF</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/mof-kod-bidang-01.png" data-title="Senarai Kod Bidang MOF">
+                    <span class="doc-code">MOF / 02</span><div class="doc-mark">MOF</div>
+                    <div><small>Kementerian Kewangan</small><h3>Senarai Kod Bidang</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/mof-kod-bidang-02.png" data-title="Sambungan Kod Bidang MOF">
+                    <span class="doc-code">MOF / 03</span><div class="doc-mark">MOF</div>
+                    <div><small>Kementerian Kewangan</small><h3>Sambungan Kod Bidang</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/cidb-perakuan-kerja.png" data-title="Sijil Perolehan Kerja Kerajaan CIDB">
+                    <span class="doc-code">CIDB / 01</span><div class="doc-mark">CIDB</div>
+                    <div><small>Perolehan Kerja Kerajaan</small><h3>Perakuan CIDB</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/cidb-perakuan-pendaftaran.png" data-title="Perakuan Pendaftaran CIDB">
+                    <span class="doc-code">CIDB / 02</span><div class="doc-mark">CIDB</div>
+                    <div><small>Kontraktor Tempatan</small><h3>Pendaftaran CIDB</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/pengesahan-bank.png" data-title="Surat Pengesahan Akaun Bank">
+                    <span class="doc-code">BANK / 01</span><div class="doc-mark">MBB</div>
+                    <div><small>Maklumat Perbankan</small><h3>Pengesahan Bank</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/surat-lantikan-2026.png" data-title="Surat Lantikan Projek 2026">
+                    <span class="doc-code">PROJEK / 26</span><div class="doc-mark">MB</div>
+                    <div><small>Kerajaan Negeri Perak</small><h3>Surat Lantikan 2026</h3></div><i>↗</i>
+                </button>
+
+                <button class="document-card reveal" type="button"
+                    data-document="assets/documents/surat-lantikan-2025.png" data-title="Surat Lantikan Projek 2025">
+                    <span class="doc-code">PROJEK / 25</span><div class="doc-mark">MB</div>
+                    <div><small>Kerajaan Negeri Perak</small><h3>Surat Lantikan 2025</h3></div><i>↗</i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Maklumat hubungan -->
+        <section class="contact" id="hubungi">
+            <div class="contact-orb" aria-hidden="true"></div>
+            <div class="contact-content reveal">
+                <p class="kicker">Mulakan bersama kami</p>
+                <h2>Ada projek dalam<br><span>perancangan?</span></h2>
+                <p>Mari berbincang tentang penyelesaian yang sesuai dengan keperluan organisasi anda.</p>
+                <a class="button button-light magnetic" href="mailto:binaempire@outlook.com">Hubungi Bina Empire <span>↗</span></a>
+            </div>
+
+            <div class="contact-details reveal" data-delay="120">
+                <div><small>Telefon</small><a href="tel:+6058310231">05-831 0231</a></div>
+                <div><small>E-mel</small><a href="mailto:binaempire@outlook.com">binaempire@outlook.com</a></div>
+                <div><small>Alamat</small><p>No. 62A, Jalan Meru Impian A1,<br>Pusat Perniagaan Meru Impian,<br>30020 Ipoh, Perak Darul Ridzuan.</p></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bahagian kaki laman -->
+    <footer class="footer">
+        <img src="assets/images/logo-bina-empire.png" alt="Bina Empire Enterprise">
+        <p>202203198243 (PG0530914-T)</p>
+        <p>© <span id="currentYear"></span> Bina Empire Enterprise. Hak cipta terpelihara.</p>
+        <a href="#utama">Kembali ke atas ↑</a>
+    </footer>
+
+    <!-- Paparan terperinci bagi setiap cabang subprojek -->
+    <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-labelledby="projectModalTitle">
+        <button class="project-modal-close" id="projectModalClose" type="button" aria-label="Tutup maklumat projek">
+            Tutup <span>×</span>
+        </button>
+        <div class="project-modal-shell">
+            <div class="project-modal-visual" id="projectModalVisual">
+                <span class="project-modal-number" id="projectModalNumber">01</span>
+                <span class="project-modal-symbol" id="projectModalSymbol">⌘</span>
+                <p>BINA EMPIRE · SUB PROJECT</p>
+                <div class="project-leader" id="projectLeader"></div>
+            </div>
+
+            <div class="project-modal-content">
+                <small id="projectModalCategory">Kategori Projek</small>
+                <h2 id="projectModalTitle">Nama Projek</h2>
+                <p class="project-modal-intro" id="projectModalIntro"></p>
+
+                <div class="project-status-row">
+                    <div><span>Unit</span><strong id="projectModalStatus"></strong></div>
+                    <div><span>Personel</span><strong id="projectModalLocation"></strong></div>
+                    <div><span>Jawatan</span><strong id="projectModalPhase"></strong></div>
+                </div>
+
+                <div class="project-information-grid">
+                    <article><span>01</span><h3>Maklumat</h3><p id="projectModalOverview"></p></article>
+                    <article><span>02</span><h3>Skop</h3><ul id="projectModalScope"></ul></article>
+                    <article><span>03</span><h3>Tempoh</h3><p id="projectModalValue"></p></article>
+                    <article><span>04</span><h3>Catatan</h3><p id="projectModalNote"></p></article>
+                </div>
+
+                <section class="project-photo-section" aria-labelledby="projectGalleryTitle">
+                    <div class="gallery-heading">
+                        <h3 id="projectGalleryTitle">Galeri Projek</h3>
+                        <span id="projectGalleryCount"></span>
+                    </div>
+                    <div class="project-photo-grid" id="projectGallery"></div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Galeri foto projek: gambar penuh, navigasi papan kekunci dan sentuhan. -->
+    <dialog class="photo-viewer" id="photoViewer" aria-labelledby="photoViewerTitle">
+        <div class="photo-viewer-bar">
+            <div><small id="photoViewerTitle">Galeri Projek</small><p id="photoViewerCount" aria-live="polite"></p></div>
+            <button type="button" id="photoViewerClose" aria-label="Tutup galeri gambar">Tutup ×</button>
+        </div>
+        <div class="photo-viewer-stage">
+            <button type="button" id="photoPrevious" aria-label="Gambar sebelumnya">←</button>
+            <img id="photoViewerImage" alt="">
+            <button type="button" id="photoNext" aria-label="Gambar seterusnya">→</button>
+        </div>
+        <p class="photo-viewer-caption" id="photoViewerCaption"></p>
+    </dialog>
+
+    <!-- Paparan skrin penuh dokumen rasmi -->
+    <div class="document-modal" id="documentModal" role="dialog" aria-modal="true" aria-hidden="true"
+        aria-labelledby="modalTitle">
+        <div class="modal-toolbar">
+            <div><small>Dokumen Rasmi · Paparan Sahaja</small><h2 id="modalTitle">Dokumen</h2></div>
+            <button id="modalClose" type="button" aria-label="Tutup dokumen">Tutup <span>×</span></button>
+        </div>
+        <div class="modal-document" id="modalDocument">
+            <img id="modalImage" src="" alt="">
+            <div class="copyright-cross" aria-hidden="true">
+                <span>© BINA EMPIRE · DOKUMEN RASMI · DILINDUNGI</span>
+            </div>
+        </div>
+        <div class="modal-warning">Hak cipta Bina Empire Enterprise · Salinan dan muat turun tidak dibenarkan</div>
+    </div>
+
+    <!-- Fail fungsi interaktif -->
+    <script src="script.js?v=20260929-25"></script>
+</body>
+
+</html>
