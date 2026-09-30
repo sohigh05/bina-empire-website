@@ -401,10 +401,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectData = {
         it: {
             number: "01", symbol: "⌘", category: "Teknologi Maklumat", title: "IT",
-            intro: "Buat masa kini, bidang IT memberi tumpuan kepada pembangunan website, sistem berasaskan web dan web tempahan.",
+            intro: "Bidang IT memberi tumpuan kepada pembangunan website, sistem berasaskan web dan web tempahan.",
             status: "Teknologi Maklumat", location: "Nor Azila Binti Aznam", phase: "Eksekutif Projek",
             overview: "Membangunkan penyelesaian web yang disesuaikan mengikut keperluan operasi dan pengalaman pengguna.",
-            scope: ["Pembangunan website.", "Pembangunan sistem berasaskan web.", "Pembangunan web tempahan."], value: "",
+            scope: [
+                "Pembangunan website korporat yang moden, pantas dan mesra semua peranti.",
+                "Pembangunan sistem berasaskan web yang memperkemas aliran kerja dan pengurusan operasi.",
+                "Pembangunan web tempahan yang menjadikan proses semakan dan tempahan lebih mudah."
+            ], value: "",
             note: "Pelatih Industri: Nik Muhammad Suhail Bin Nik Othman; Firdaus Sim Chong Fei."
         },
         construction: {
@@ -412,7 +416,10 @@ document.addEventListener("DOMContentLoaded", () => {
             intro: "Perkhidmatan pembinaan dan penyelenggaraan yang dilaksanakan secara tersusun dan profesional.",
             status: "Pembinaan", location: "Muhammad Aqil Zarif Bin Zainal Abidin", phase: "Penyelia",
             overview: "Perkhidmatan pembinaan, penyelenggaraan dan penambahbaikan infrastruktur.",
-            scope: ["Kerja pembinaan dan penyelenggaraan.", "Kerja penambahbaikan infrastruktur."],
+            scope: [
+                "Pelaksanaan kerja pembinaan dan penyelenggaraan dengan kemasan teratur serta perhatian terhadap setiap perincian.",
+                "Penambahbaikan infrastruktur yang dirancang untuk meningkatkan fungsi, keselamatan dan ketahanan."
+            ],
             value: "", note: ""
         },
         agro: {
@@ -420,22 +427,31 @@ document.addEventListener("DOMContentLoaded", () => {
             intro: "Pengurusan dan pembekalan ternakan yang menitikberatkan kualiti serta kebajikan.",
             status: "Agro & Farm", location: "Muhamad Afendi Bin Ahmad", phase: "Penyelia",
             overview: "Pembekalan ternakan mengikut keperluan pelanggan dan program.",
-            scope: ["Pembekalan dan pengurusan ternakan."], value: "", note: ""
+            scope: [
+                "Pengurusan pembekalan ternakan secara tersusun dengan keutamaan pada kualiti, kebajikan dan keperluan pelanggan."
+            ], value: "", note: ""
         },
         fnb: {
             number: "04", symbol: "◇", category: "Makanan & Minuman", title: "F&B",
             intro: "Perkhidmatan makanan dan minuman untuk operasi harian, majlis serta acara.",
             status: "Makanan & Minuman", location: "Farhanah Binti Firdaus Francis", phase: "Eksekutif Projek",
             overview: "Perkhidmatan kafeteria, kafe dan katering.",
-            scope: ["Pengurusan dan operasi kafeteria.", "Operasi kafe dan penyediaan makanan serta minuman.", "Penyediaan makanan untuk majlis dan acara."],
+            scope: [
+                "Pengurusan operasi kafeteria yang cekap, bersih dan tersusun.",
+                "Penyediaan makanan dan minuman dengan persembahan menarik serta pengalaman pelanggan yang menyenangkan.",
+                "Perkhidmatan katering untuk majlis dan acara dengan penyelarasan sajian yang kemas dan profesional."
+            ],
             value: "", note: ""
         },
         "secret-pastry": {
             number: "05", symbol: "✦", category: "Secret Pastry & Coffee", title: "Secret Pastry & Coffee",
             intro: "Pilihan pastri dan kopi yang disediakan dalam pengalaman sajian yang kemas dan mesra.",
             status: "Secret Pastry & Coffee", location: "Muhammad Hanif Bin Zamail",
-            phase: "Pengurus", overview: "Pengurusan sajian pastri, kopi dan pengalaman pelanggan.",
-            scope: ["Penyediaan pastri dan minuman.", "Pengurusan operasi serta pengalaman pelanggan."],
+            phase: "Executive Leader", overview: "Pengurusan sajian pastri, kopi dan pengalaman pelanggan.",
+            scope: [
+                "Penghasilan pastri dan minuman yang menitikberatkan rasa, mutu serta persembahan.",
+                "Pengurusan operasi dan pengalaman pelanggan yang mesra, kemas serta konsisten."
+            ],
             value: "", note: "Penyelia: Nur Maisarah Binti Rosidi."
         }
     };
