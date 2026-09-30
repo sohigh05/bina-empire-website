@@ -445,12 +445,13 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         "secret-pastry": {
             number: "05", symbol: "✦", category: "Secret Pastry & Coffee", title: "Secret Pastry & Coffee",
-            intro: "Pilihan pastri dan kopi yang disediakan dalam pengalaman sajian yang kemas dan mesra.",
+            intro: "Pengurusan kafe yang menggabungkan sajian pastri dan kopi berkualiti dengan suasana kemas, servis mesra serta pengalaman pelanggan yang menyenangkan.",
             status: "Secret Pastry & Coffee", location: "Muhammad Hanif Bin Zamail",
-            phase: "Executive Leader", overview: "Pengurusan sajian pastri, kopi dan pengalaman pelanggan.",
+            phase: "Executive Leader", overview: "Mengurus operasi harian kafe secara menyeluruh, daripada penyediaan pastri dan kopi hingga penjagaan ruang, mutu sajian serta layanan pelanggan yang konsisten.",
             scope: [
-                "Penghasilan pastri dan minuman yang menitikberatkan rasa, mutu serta persembahan.",
-                "Pengurusan operasi dan pengalaman pelanggan yang mesra, kemas serta konsisten."
+                "Menyediakan pilihan pastri, kopi dan minuman dengan perhatian terhadap rasa, kesegaran, kualiti bahan serta persembahan yang menarik.",
+                "Mengurus perjalanan operasi kafe termasuk penyediaan sajian, susun atur ruang, kebersihan, stok dan kelancaran servis harian.",
+                "Mewujudkan pengalaman pelanggan yang mesra, selesa dan konsisten melalui layanan profesional serta suasana kafe yang terjaga."
             ],
             value: "", note: "Penyelia: Nur Maisarah Binti Rosidi."
         }
