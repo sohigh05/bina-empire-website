@@ -1024,8 +1024,9 @@ button {
 .org-division-label { position: relative; z-index: 2; width: max-content; margin: 58px auto 32px; padding: 9px 20px; border: 1px solid rgba(227,27,35,.38); border-radius: 50px; background: #130b0b; color: #aaa; font-size: 8px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
 .org-level-divisions { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
 .org-level-divisions::before { content: ""; position: absolute; height: 1px; top: -17px; left: 10%; right: 10%; background: rgba(255,255,255,.22); }
+.org-branch { position: relative; min-width: 0; }
+.org-branch::before { content: ""; position: absolute; z-index: 3; width: 1px; height: 18px; left: 50%; bottom: 100%; background: rgba(255,255,255,.22); }
 .org-division-card { min-height: 185px; justify-content: flex-start; padding: 22px 14px; }
-.org-division-card::before { content: ""; position: absolute; width: 1px; height: 18px; left: 50%; bottom: 100%; background: rgba(255,255,255,.22); }
 .org-division-card > span { margin-top: 18px; color: #777; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
 .org-division-card h3 { font-size: 15px; }
 .org-subordinate-group {
@@ -1059,9 +1060,9 @@ button {
 .org-subordinate {
     position: relative;
     min-width: 0;
-    padding: 15px 8px 0;
-    border: 1px solid var(--garis);
-    background: rgba(255,255,255,.012);
+    min-height: 175px;
+    padding: 20px 10px;
+    background: linear-gradient(145deg,#111,#090909);
 }
 .org-subordinate::before {
     content: "";
@@ -1080,11 +1081,11 @@ button {
 .management-block.is-visible .org-level-manager .org-card { animation-delay: .12s; }
 .management-block.is-visible .org-level-administration .org-card:nth-child(1) { animation-delay: .22s; }
 .management-block.is-visible .org-level-administration .org-card:nth-child(2) { animation-delay: .3s; }
-.management-block.is-visible .org-division-card:nth-child(1) { animation-delay: .38s; }
-.management-block.is-visible .org-division-card:nth-child(2) { animation-delay: .45s; }
-.management-block.is-visible .org-division-card:nth-child(3) { animation-delay: .52s; }
-.management-block.is-visible .org-division-card:nth-child(4) { animation-delay: .59s; }
-.management-block.is-visible .org-division-card:nth-child(5) { animation-delay: .66s; }
+.management-block.is-visible .org-branch:nth-child(1) .org-card { animation-delay: .38s; }
+.management-block.is-visible .org-branch:nth-child(2) .org-card { animation-delay: .45s; }
+.management-block.is-visible .org-branch:nth-child(3) .org-card { animation-delay: .52s; }
+.management-block.is-visible .org-branch:nth-child(4) .org-card { animation-delay: .59s; }
+.management-block.is-visible .org-branch:nth-child(5) .org-card { animation-delay: .66s; }
 .management-block.is-visible .org-level-manager::before,.management-block.is-visible .org-level-administration::before,.management-block.is-visible .org-level-administration::after,.management-block.is-visible .org-level-divisions::before { animation: connectorGlow 2.6s ease-in-out infinite alternate; }
 
 @keyframes orgCardReveal { from { opacity: 0; transform: translateY(24px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
@@ -1783,7 +1784,7 @@ button {
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .organization-chart { padding-inline: 20px; }
     .org-level-divisions { grid-template-columns: repeat(2,1fr); }
-    .org-level-divisions::before, .org-division-card::before { display: none; }
+    .org-level-divisions::before, .org-branch::before { display: none; }
     .stats-grid article:nth-child(2) { border-right: 0; }
     .value-cards { grid-template-columns: repeat(2, 1fr); }
     .mission-grid { grid-template-columns: repeat(2,1fr); }
