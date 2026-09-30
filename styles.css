@@ -1022,11 +1022,11 @@ button {
 .org-level-administration::after { content: ""; position: absolute; height: 1px; top: -10px; left: 25%; right: 25%; background: rgba(255,255,255,.25); }
 .org-level-administration .org-card::before { content: ""; position: absolute; width: 1px; height: 11px; left: 50%; bottom: 100%; background: rgba(255,255,255,.25); }
 .org-division-label { position: relative; z-index: 2; width: max-content; margin: 58px auto 32px; padding: 9px 20px; border: 1px solid rgba(227,27,35,.38); border-radius: 50px; background: #130b0b; color: #aaa; font-size: 8px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
-.org-level-divisions { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; }
+.org-level-divisions { display: grid; grid-template-columns: repeat(5,1fr); align-items: start; gap: 10px; }
 .org-level-divisions::before { content: ""; position: absolute; height: 1px; top: -17px; left: 10%; right: 10%; background: rgba(255,255,255,.22); }
-.org-branch { position: relative; min-width: 0; }
+.org-branch { position: relative; display: flex; min-width: 0; flex-direction: column; align-items: stretch; }
 .org-branch::before { content: ""; position: absolute; z-index: 3; width: 1px; height: 18px; left: 50%; bottom: 100%; background: rgba(255,255,255,.22); }
-.org-division-card { min-height: 185px; justify-content: flex-start; padding: 22px 14px; }
+.org-division-card { width: 100%; height: 255px; min-height: 255px; justify-content: flex-start; align-items: center; padding: 22px 14px; }
 .org-division-card > span { margin-top: 18px; color: #777; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
 .org-division-card h3 { font-size: 15px; }
 .org-subordinate-group {
@@ -1039,6 +1039,10 @@ button {
 }
 .org-subordinate-group-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .org-subordinate-group-single { grid-template-columns: 1fr; }
+.org-branch:nth-child(4) .org-subordinate-group-pair {
+    width: calc(200% + 10px);
+    margin-left: calc(-50% - 2.5px);
+}
 .org-subordinate-group::after {
     content: "";
     position: absolute;
@@ -1060,7 +1064,11 @@ button {
 .org-subordinate {
     position: relative;
     min-width: 0;
-    min-height: 175px;
+    width: 100%;
+    height: 190px;
+    min-height: 190px;
+    align-items: center;
+    justify-content: flex-start;
     padding: 20px 10px;
     background: linear-gradient(145deg,#111,#090909);
 }
@@ -1074,7 +1082,7 @@ button {
     background: rgba(255,255,255,.22);
 }
 .org-subordinate b { color: #777; font-size: 7px; letter-spacing: .1em; text-transform: uppercase; }
-.org-subordinate p { margin-top: 7px; color: #bbb; font: 500 13px/1.15 var(--font-tajuk); text-transform: uppercase; }
+.org-subordinate p { display: flex; min-height: 54px; align-items: center; justify-content: center; margin-top: 7px; color: #bbb; font: 500 13px/1.15 var(--font-tajuk); text-align: center; text-transform: uppercase; }
 
 /* Animasi masuk berperingkat untuk carta organisasi */
 .management-block.is-visible .org-card { animation: orgCardReveal .7s cubic-bezier(.16,1,.3,1) both; }
@@ -1785,6 +1793,7 @@ button {
     .organization-chart { padding-inline: 20px; }
     .org-level-divisions { grid-template-columns: repeat(2,1fr); }
     .org-level-divisions::before, .org-branch::before { display: none; }
+    .org-branch:nth-child(4) .org-subordinate-group-pair { width: 100%; margin-left: 0; }
     .stats-grid article:nth-child(2) { border-right: 0; }
     .value-cards { grid-template-columns: repeat(2, 1fr); }
     .mission-grid { grid-template-columns: repeat(2,1fr); }
@@ -1838,7 +1847,8 @@ button {
     .org-level-administration::after, .org-level-administration .org-card::before { display: none; }
     .org-level-administration::before { height: 32px; }
     .org-division-label { margin-top: 48px; }
-    .org-division-card { min-height: auto; }
+    .org-division-card { height: 255px; min-height: 255px; }
+    .org-subordinate { height: 190px; min-height: 190px; }
     .project-directory { grid-template-columns: 1fr; margin-top: 50px; }
     .subproject-card { min-height: 275px; }
     .project-modal { padding: 0; }
